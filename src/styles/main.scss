@@ -1,0 +1,41 @@
+@import "libs";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "general/fonts";
+@import "general/base";
+@import "../blocks/blocks";
+
+h1, h2, h3, h4, p{
+    padding: 0;
+    margin:0;
+ }
+body{
+    font-family: 'Roboto Slab', serif;
+}
+.header-list{
+    font-family: 'Open Sans', sans-serif;
+}
+.page-main{
+    background: url(../img/main-bg.png) no-repeat;
+    background-size: cover;
+    
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo{
+        display:block;
+        background-image: url(../img/logo.svg);
+        width:137px;
+        height:28px;
+    }
+    &-list{
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        &__item{
+            margin-left:15px;
+        }
+    }
+}
