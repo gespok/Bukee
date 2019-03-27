@@ -24,6 +24,7 @@ body{
     background-size: cover;
     color: $light-color;
     padding-bottom: 50px;
+    padding-bottom: 158px;
 }
 .header{
     display: flex;
@@ -31,7 +32,7 @@ body{
     align-items: center;
     max-width: 1170px;
     margin:0 auto;
-    padding-top: 38px;
+    padding-top: 35px;
     padding-bottom: 166px;
     &__logo{
         display:block;
@@ -71,6 +72,11 @@ body{
         letter-spacing: 0.7px;
         margin-bottom: 31px;
     }
+    &__name-top{
+        margin-top:16px;
+        margin-left:0;
+        margin-bottom: 20px;
+    }
     &__title{
         font-size:48px;
         font-weight: 700;
@@ -87,11 +93,14 @@ body{
             letter-spacing: 0.9px;
         }
     }
+    &__title-top{
+        text-transform: none;
+    }
     &__description{
         font-family: 'Open Sans', sans-serif;
         font-size:15px; 
         line-height: 24px;
-        letter-spacing: 0.7px;
+        letter-spacing: 0.75px;
         margin-bottom: 24px;
     }
     &__btn{
@@ -107,6 +116,9 @@ body{
         padding: 15px 0px;
         letter-spacing: 1.6px;
         margin-bottom: 19px;
+    }
+    &__btn-top{
+        max-width: 237px;
     }
     small{
         font-style: italic;
@@ -124,5 +136,42 @@ body{
         background-repeat: no-repeat;
         flex-basis:500px;
         
+    }
+}
+.block-author{
+    display:flex;
+    justify-content: space-between;
+}
+.block-ava{
+    position: relative;
+    &__svg{
+        position: absolute;
+        z-index: -1;
+        right: 0;
+    }
+    &__img{
+        margin-top: 48px;
+        margin-right: 44px;     
+    }
+}
+.page{
+    padding-top: 160px;
+}
+.block-counter{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 180px;
+    p{
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        span{
+            font-family: 'Roboto Slab', serif;
+            display: block;
+            font-weight: 100;
+            font-size:80px;
+            color:$accent-color;
+            margin-bottom: 13px;
+        }
     }
 }
