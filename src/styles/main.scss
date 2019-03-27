@@ -5,25 +5,34 @@
 @import "general/base";
 @import "../blocks/blocks";
 
+$light-color:#fff;
+$accent-color:#65e47d;
 h1, h2, h3, h4, p{
     padding: 0;
     margin:0;
  }
 body{
     font-family: 'Roboto Slab', serif;
+ }
+.wrap{
+    max-width: 1170px;
+    margin: 0 auto;
 }
-.header-list{
-    font-family: 'Open Sans', sans-serif;
-}
+
 .page-main{
     background: url(../img/main-bg.png) no-repeat;
     background-size: cover;
-    
+    color: $light-color;
+    padding-bottom: 50px;
 }
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1170px;
+    margin:0 auto;
+    padding-top: 38px;
+    padding-bottom: 166px;
     &__logo{
         display:block;
         background-image: url(../img/logo.svg);
@@ -31,11 +40,89 @@ body{
         height:28px;
     }
     &-list{
+        font-family: 'Open Sans', sans-serif;
         list-style-type: none;
         display: flex;
         justify-content: flex-end;
         &__item{
-            margin-left:15px;
+            margin-left: 22px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+            &:hover{
+                border-bottom: 3px solid $accent-color;
+            }
         }
+        &__item.active{
+            border-bottom: 3px solid $accent-color;
+        }
+        &__link{
+            text-decoration: none;
+            color: $light-color;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+.block-text{
+    flex-basis: calc(93% - 500px);
+    &__name{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        margin-bottom: 31px;
+    }
+    &__title{
+        font-size:48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.7px;
+        margin-bottom: 40px;
+        
+        span{
+            display: block;
+            color: $accent-color;
+            font-size:18px;
+            margin-top:11px;
+            text-transform: none;
+            letter-spacing: 0.9px;
+        }
+    }
+    &__description{
+        font-family: 'Open Sans', sans-serif;
+        font-size:15px; 
+        line-height: 24px;
+        letter-spacing: 0.7px;
+        margin-bottom: 24px;
+    }
+    &__btn{
+        display: block;
+        background-color: $accent-color;
+        color:$light-color;
+        text-decoration: none;
+        max-width: 250px;
+        border-radius: 3px;
+        text-align: center;
+        font-weight: 18px;
+        margin-top: 47px;
+        padding: 15px 0;
+        letter-spacing: 1.6px;
+        margin-bottom: 19px;
+    }
+    small{
+        font-style: italic;
+        letter-spacing: -0.2px;
+    }
+}
+.block-book{
+    display: flex;
+    justify-content: flex-start;
+    &-demo{
+        display: block;
+        width:447px;
+        height: 643px;
+        background-image: url(../img/book.svg);
+        background-repeat: no-repeat;
+        flex-basis:500px;
+        
     }
 }
